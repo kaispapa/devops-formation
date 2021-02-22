@@ -12,7 +12,7 @@ RUN java -version
 
 WORKDIR /opt/tomcat/webapps
 
-ADD target/webapp.war  /opt/tomcat/webapps/
+ADD webapp.war  /opt/tomcat/webapps/
 
 EXPOSE 8181
 
