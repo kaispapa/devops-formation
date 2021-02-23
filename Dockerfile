@@ -3,9 +3,10 @@ FROM ubuntu
 
 RUN mkdir /opt/tomcat/
 RUN apt-get update -y && apt-get install -y curl
-WORKDIR /opt/tomcat
+#WORKDIR /opt/tomcat
 RUN curl -O  https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.30/bin/apache-tomcat-9.0.30.tar.gz
 RUN tar xzvf apache-tomcat-9.0.30.tar.gz
+WORKDIR /opt/tomcat
 RUN mv apache-tomcat-9.0.30/* /opt/tomcat/.
 RUN apt-get -y install default-jre
 RUN java -version
