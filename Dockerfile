@@ -1,5 +1,5 @@
 
-FROM tomcat:8-jre8
+FROM tomcat:jre8
 
 COPY webapp/target/webapp.war  /usr/local/tomcat/webapps
 
